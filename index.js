@@ -3,7 +3,7 @@ const app = express();
 
 const { authToken } = require('./src/utils/authToken');
 
-require('dotenv').config()
+require('dotenv').config();
 
 app.get('/', (req, res) => {
 	res.end('Hmmm, what are you searching for!?')

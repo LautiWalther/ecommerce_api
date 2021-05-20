@@ -1,0 +1,9 @@
+[
+	{
+		"id": 0,
+		"name": "Toy",
+		"image": "no-image.png",
+		"price": 10,
+		"color": ["red", "green", "white"]
+	}
+]
