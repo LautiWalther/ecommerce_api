@@ -4,7 +4,6 @@
 		"name": "Toy",
 		"image": "no-image.png",
 		"price": 10,
-		"color": ["red", "green", "white"],
 		"stock":{
 			"default":1,
 			"red":0,

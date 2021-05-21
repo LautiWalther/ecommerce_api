@@ -14,13 +14,13 @@ npm install
 ## Usage
 
 ```sh
-Create a .env file which contains TOKEN and PRIVATE_TOKEN, then run npm run start
+Create a .env file which contains PORT and PRIVATE_TOKEN, then run npm run start
 ```
 
 ## Run tests
 
 ```sh
-Create a .env file which contains TOKEN and PRIVATE_TOKEN, then run npm run test
+Create a .env file which contains PORT and PRIVATE_TOKEN, then run npm run test
 ```
 
 ## Author
