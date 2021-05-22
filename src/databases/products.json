@@ -1,14 +1,83 @@
 [
 	{
-		"id": 0,
-		"name": "Toy",
-		"image": "no-image.png",
-		"price": 10,
-		"stock":{
-			"default":1,
-			"red":0,
-			"green":3,
-			"white":6
-		}
+		"name": "new product",
+		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
+		"price": 0,
+		"stock": [
+			{
+				"name": "white",
+				"count": 4
+			},
+			{
+				"name": "red",
+				"count": 3
+			}
+		],
+		"id": 1,
+		"deleted": true
+	},
+	{
+		"name": "nuevardo",
+		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
+		"price": "5000",
+		"stock": [
+			{
+				"name": "green",
+				"count": 4
+			},
+			{
+				"name": "yellow",
+				"count": 3
+			}
+		],
+		"id": 2
+	},
+	{
+		"name": "nuevardo",
+		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
+		"price": "7000",
+		"stock": [
+			{
+				"name": "green",
+				"count": 4
+			},
+			{
+				"name": "yellow",
+				"count": 3
+			}
+		],
+		"id": 3
+	},
+	{
+		"name": "nuevardo",
+		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
+		"price": "10000",
+		"stock": [
+			{
+				"name": "green",
+				"count": 4
+			},
+			{
+				"name": "yellow",
+				"count": 3
+			}
+		],
+		"id": 5
+	},
+	{
+		"name": "nuevardo",
+		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
+		"price": "100123",
+		"stock": [
+			{
+				"name": "green",
+				"count": 4
+			},
+			{
+				"name": "yellow",
+				"count": 3
+			}
+		],
+		"id": 6
 	}
 ]

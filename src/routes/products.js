@@ -19,36 +19,50 @@ route.post('/', authToken, (req, res) => {
 	res.json(product_with_id);
 });
 
-route.post('/create', authToken, (req, res) => {
+route.put('/', authToken, (req, res) => {
 	var new_product = {
-		"id": products[products.length-1].id + 1 || 0,
 		"name": clean(req.body.name) || 'new product',
 		"image": clean(req.body.image) || 'no-image',
 		"price": clean(req.body.price) || 0,
-		"stock": {}
+		"stock": []
 	}
+	new_product.id = products[products.length-1] ? products[products.length-1].id + 1 : 0
 
 	/*
 	
 	We spect on stock : [
 		{
-			name: 'red',
-			count: 3
+			"name": "red",
+			"count": 3
 		},
 		{
-			name: 'white',
-			count: 4
+			"name": "white",
+			"count": 4
 		}
 	]
 	
 	*/
-
-	req.body.stock.forEach(type => {
-		new_product.stock[clean(type.name)] = type.count;
-	})
+	if(req.body.stock){
+		req.body.stock.forEach(type => {
+			type = JSON.parse(type);
+			new_product.stock.push(type);
+		});
+	}
 	
 	products.push(new_product);
+	fs.writeFileSync(path.resolve(`${process.cwd()}${path.sep}src${path.sep}databases${path.sep}products.json`), JSON.stringify(products, null, "\t"));
 
-	fs.writeFileSync(path.resolve(`${process.cwd()}${path.sep}src${path.sep}databases${path.sep}products.json`));
-})
+	res.json(new_product);
+});
+
+route.delete('/', authToken, (req, res) => {
+	if(isNaN(req.body.id)) return res.json({error:1, message:'id must be an integer.'});
+	var to_del = products.find(product => product.id === +req.body.id);
+	products.splice(products.indexOf(to_del), 1);
+	to_del.deleted = true;
+	
+	fs.writeFileSync(path.resolve(`${process.cwd()}${path.sep}src${path.sep}databases${path.sep}products.json`), JSON.stringify(products, null, "\t"));
+	return res.json(to_del);
+});
+
 exports = module.exports = route;
