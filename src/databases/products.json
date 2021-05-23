@@ -1,22 +1,5 @@
 [
 	{
-		"name": "new product",
-		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
-		"price": 0,
-		"stock": [
-			{
-				"name": "white",
-				"count": 4
-			},
-			{
-				"name": "red",
-				"count": 3
-			}
-		],
-		"id": 1,
-		"deleted": true
-	},
-	{
 		"name": "nuevardo",
 		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
 		"price": "5000",

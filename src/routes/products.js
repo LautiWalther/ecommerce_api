@@ -65,4 +65,30 @@ route.delete('/', authToken, (req, res) => {
 	return res.json(to_del);
 });
 
+route.patch('/', authToken, (req, res) => {
+	if(isNaN(req.body.id)) return res.json({error:1, message:'id must be an integer.'});
+	var to_edit = products.find(product => product.id === +req.body.id);
+	if(!to_edit) return res.json({error:1, message:"couldn't find item with id " + req.body.id});
+	var to_edit_index = products.indexOf(to_edit);
+
+	var edited = {
+		"name": req.body.name || to_edit.name,
+		"image": req.body.image || to_edit.image,
+		"price": req.body.price || to_edit.price,
+		"id": to_edit.id
+	};
+	if(req.body.stock){
+		edited.stock = [];
+
+		req.body.stock.forEach(item => {
+			edited.stock.push(JSON.parse(item));
+		});
+	}
+
+	products[to_edit_index] = edited;
+
+	fs.writeFileSync(path.resolve(`${process.cwd()}${path.sep}src${path.sep}databases${path.sep}products.json`), JSON.stringify(products, null, "\t"));
+	return res.json(products[to_edit_index]);
+});
+
 exports = module.exports = route;
