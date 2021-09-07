@@ -1,8 +1,8 @@
 [
 	{
-		"name": "nuevardo",
-		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
-		"price": "5000",
+		"name": "new item 0",
+		"image": "https://lautarowalther.xyz/assets/images/home_bg_my.jpg",
+		"price": 5000,
 		"stock": [
 			{
 				"name": "green",
@@ -16,9 +16,9 @@
 		"id": 2
 	},
 	{
-		"name": "nuevardo",
-		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
-		"price": "7000",
+		"name": "new item 1",
+		"image": "https://lautarowalther.xyz/assets/images/home_bg_my.jpg",
+		"price": 7000,
 		"stock": [
 			{
 				"name": "green",
@@ -32,9 +32,9 @@
 		"id": 3
 	},
 	{
-		"name": "nuevardo",
-		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
-		"price": "10000",
+		"name": "new item 2",
+		"image": "https://lautarowalther.xyz/assets/images/home_bg_my.jpg",
+		"price": 10000,
 		"stock": [
 			{
 				"name": "green",
@@ -48,9 +48,9 @@
 		"id": 5
 	},
 	{
-		"name": "nuevardo",
-		"image": "https://cdn.discordapp.com/attachments/826587908823318562/845441464372428820/unknown.png",
-		"price": "100123",
+		"name": "new item 3",
+		"image": "https://lautarowalther.xyz/assets/images/home_bg_my.jpg",
+		"price": 100123,
 		"stock": [
 			{
 				"name": "green",
