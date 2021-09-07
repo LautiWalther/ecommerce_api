@@ -58,6 +58,7 @@ route.put('/', authToken, (req, res) => {
 route.delete('/', authToken, (req, res) => {
 	if(isNaN(req.body.id)) return res.json({error:1, message:'id must be an integer.'});
 	var to_del = products.find(product => product.id === +req.body.id);
+	if(!to_del) return res.json({error:1, message:'id doesnt exists.'});
 	products.splice(products.indexOf(to_del), 1);
 	to_del.deleted = true;
 	

@@ -53,11 +53,11 @@
 		"price": 100123,
 		"stock": [
 			{
-				"name": "green",
+				"name": "XL",
 				"count": 4
 			},
 			{
-				"name": "yellow",
+				"name": "XXL",
 				"count": 3
 			}
 		],

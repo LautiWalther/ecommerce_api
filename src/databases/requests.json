@@ -1,0 +1,24 @@
+[
+	{
+		"id": 0,
+		"email": "sample@mail.com",
+		"name": "sample_name",
+		"lastname": "sample_lastname",
+		"phone": "sample_phone",
+		"products": [
+			{
+				"id": 2,
+				"quantity": 1,
+				"size": "XL",
+				"price": 100123
+			},
+			{
+				"id": 2,
+				"quantity": 1,
+				"size": "XXL",
+				"price": 100123
+			}
+		],
+		"payment_method": "cash"
+	}
+]
