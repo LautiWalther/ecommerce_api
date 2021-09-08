@@ -19,6 +19,8 @@
 				"price": 100123
 			}
 		],
-		"payment_method": "cash"
+		"payment_method": "cash",
+		"payed": false,
+		"delivered": false
 	}
 ]

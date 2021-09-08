@@ -18,4 +18,6 @@ app.get('/', (req, res) => {
 
 app.use('/products', require('./src/routes/products'));
 
+app.use('/requests', require('./src/routes/requests'));
+
 app.listen(process.env.PORT, () => console.log('API Listening on port ' + process.env.PORT));
