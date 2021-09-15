@@ -20,7 +20,7 @@ route.post('/', authToken, (req, res) => {
 	res.json(request_with_id);
 });
 
-route.put('/', authToken, (req, res) => {
+route.put('/', (req, res) => {
 	if(!req.body.email || !req.body.name || !req.body.lastname || !req.body.email || !req.body.phone || !req.body.products || !req.body.payment) return res.json({error:'Missing Data.'});
 	/*
 		req.body.products.forEach(i => {
